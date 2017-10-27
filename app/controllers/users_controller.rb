@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
-  def settings
+
+  def show
+    @user = User.find(params[:id])
+  end
+
+  def edit
     email = params['email']
     token_string = params['token']
     @user = User.find_by email:email
