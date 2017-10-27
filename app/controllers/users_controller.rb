@@ -10,4 +10,7 @@ class UsersController < ApplicationController
     @user = User.find_by email:email
     @token = Token.find_by nonce:token_string
   end
+  def update
+    
+  end
 end

@@ -6,8 +6,16 @@ $(document).ready(function(){
     if ($(this).prop('checked')){
       console.log('select all box checked');
       $('.notification').prop('checked', false);
+      $('.notification').attr('disabled', true);
+
+    }
+    else{
+      $('.notification').prop('checked', true);
+      $('.notification').attr('disabled', false);
     }
   })
 
-  $('.submit')
+  // $('form').on('submit', funciton(){
+  //   $.post()
+  // })
 })
