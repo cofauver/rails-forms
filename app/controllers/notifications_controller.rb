@@ -9,8 +9,6 @@ class NotificationsController < ApplicationController
   def edit
     @notification_form = NotificationForm.new
     if @notification_form.submit(params[:notification_form])
-      email = params['email']
-      @user = User.find_by email:email
       redirect_to users_path , notice: 'Successfully changed notification settings'
     else
       render new

@@ -12,11 +12,16 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email, :value => @email %>
+  </div>
+
   <label for="turn-off-all">Do not email me</label>
   <input id="shutoff" type="checkbox" name="turn-off-all" value="false"><br />
 
   <%= f.hidden_field :token, :value => @token_string %>
-  <%= f.hidden_field :email, :value => @email %>
+  <%= f.hidden_field :original_email, :value => @email %>
 
 
   <div class="field">
@@ -36,17 +41,4 @@
 
 <% end %>
 
-
 <%= console %>
-
-<!-- <form class="" action="/users/edit" method="post">
-  <input id="shutoff" type="checkbox" name="turn-off-all" value="false">
-  <label for="turn-off-all">Do not email me</label> <br />
-  <input class="notification" type="checkbox" name="marketing" value="true" checked="true">
-  <label for="marketing">Marketing emails</label> <br />
-  <input class="notification" type="checkbox" name="articles" value="true" checked="true">
-  <label for="articles">Article emails</label> <br />
-  <input class="notification" type="checkbox" name="digest" value="true" checked="true">
-  <label for="digest">Digest emails</label> <br />
-  <input type="submit" name="" value="Change notification settings">
-</form> -->
