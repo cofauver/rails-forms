@@ -28,8 +28,7 @@ class NotificationForm
     else
       false
     end
-
+    
   end
-
 
 end
