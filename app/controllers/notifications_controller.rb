@@ -5,7 +5,7 @@ class NotificationsController < ApplicationController
     token_string = params['token']
     @user = User.find_by email:email
     @token = Token.find_by nonce:token_string
-    @notification_form = NotificationForm.new(User.find_by email:email)
+    @notification_form = NotificationForm.new(@user)
 
   end
 

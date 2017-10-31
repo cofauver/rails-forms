@@ -1,0 +1,44 @@
+<h1>Change Notification Settings</h1>
+
+<%= form_for @notification_form, url: notification_settings_path, method: :post do |f| %>
+  <% if @notification_form.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% @notification_form.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <label for="turn-off-all">Do not email me</label>
+  <input id="shutoff" type="checkbox" name="turn-off-all" value="false"><br />
+
+  <div class="field">
+    <%= f.label :marketing %>
+    <%= f.check_box :marketing %> <br />
+  </div>
+  <div class="field">
+    <%= f.label :articles %>
+    <%= f.check_box :articles %> <br />
+  </div>
+  <div class="field">
+    <%= f.label :digest %> <br />
+    <%= f.check_box :digest %> <br />
+  </div>
+
+<%= end %>
+
+
+<!-- <form class="" action="/users/edit" method="post">
+  <input id="shutoff" type="checkbox" name="turn-off-all" value="false">
+  <label for="turn-off-all">Do not email me</label> <br />
+  <input class="notification" type="checkbox" name="marketing" value="true" checked="true">
+  <label for="marketing">Marketing emails</label> <br />
+  <input class="notification" type="checkbox" name="articles" value="true" checked="true">
+  <label for="articles">Article emails</label> <br />
+  <input class="notification" type="checkbox" name="digest" value="true" checked="true">
+  <label for="digest">Digest emails</label> <br />
+  <input type="submit" name="" value="Change notification settings">
+</form> -->
