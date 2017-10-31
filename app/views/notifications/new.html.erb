@@ -17,18 +17,18 @@
 
   <div class="field">
     <%= f.label :marketing %>
-    <%= f.check_box :marketing %> <br />
+    <%= f.check_box :marketing, {class: "notification"}  %> <br />
   </div>
   <div class="field">
     <%= f.label :articles %>
-    <%= f.check_box :articles %> <br />
+    <%= f.check_box :articles, {class: "notification"} %> <br />
   </div>
   <div class="field">
-    <%= f.label :digest %> <br />
-    <%= f.check_box :digest %> <br />
+    <%= f.label :digest %>
+    <%= f.check_box :digest, {class: "notification"} %> <br />
   </div>
 
-<%= end %>
+<% end %>
 
 
 <!-- <form class="" action="/users/edit" method="post">
