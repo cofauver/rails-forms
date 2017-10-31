@@ -15,21 +15,29 @@
   <label for="turn-off-all">Do not email me</label>
   <input id="shutoff" type="checkbox" name="turn-off-all" value="false"><br />
 
+  <%= f.hidden_field :token, :value => @token_string %>
+  <%= f.hidden_field :email, :value => @email %>
+
+
   <div class="field">
     <%= f.label :marketing %>
-    <%= f.check_box :marketing, {class: "notification"}  %> <br />
+    <%= f.check_box :marketing, {class: "notification", checked: true}  %> <br />
   </div>
   <div class="field">
     <%= f.label :articles %>
-    <%= f.check_box :articles, {class: "notification"} %> <br />
+    <%= f.check_box :articles, {class: "notification", checked: true} %> <br />
   </div>
   <div class="field">
     <%= f.label :digest %>
-    <%= f.check_box :digest, {class: "notification"} %> <br />
+    <%= f.check_box :digest, {class: "notification", checked: true} %> <br />
   </div>
+
+  <%= f.submit "Update notification settings" %>
 
 <% end %>
 
+
+<%= console %>
 
 <!-- <form class="" action="/users/edit" method="post">
   <input id="shutoff" type="checkbox" name="turn-off-all" value="false">

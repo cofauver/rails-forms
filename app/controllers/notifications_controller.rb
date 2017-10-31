@@ -1,19 +1,20 @@
 class NotificationsController < ApplicationController
 
   def new
-    email = params['email']
-    token_string = params['token']
-    @user = User.find_by email:email
-    @token = Token.find_by nonce:token_string
-    @notification_form = NotificationForm.new(@user)
-
+    @email = params['email']
+    @token_string = params['token']
+    @notification_form = NotificationForm.new
   end
 
   def edit
-    email = params['email']
-    token_string = params['token']
-    @user = User.find_by email:email
-    @token = Token.find_by nonce:token_string
+    @notification_form = NotificationForm.new
+    if @notification_form.submit(params[:notification_form])
+      email = params['email']
+      @user = User.find_by email:email
+      redirect_to users_path , notice: 'Successfully changed notification settings'
+    else
+      render new
+    end
   end
 
 end
