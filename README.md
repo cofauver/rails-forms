@@ -20,7 +20,7 @@ While I finished the basic requirements laid out in the spec sheet, there are a 
 
 1. **Add testing** Both the models and the form I created need testing. I'd hope to follow the advice here and "[Write tests. Not too many. Mostly integration.](https://blog.kentcdodds.com/write-tests-not-too-many-mostly-integration-5e8c7fff591c)
 2. **Add Styles** I'd love to integrate bootstrap, materialize, or another styling framework to polish up the appearance of the form and the site in general.
-3. **Refactoring** I'd hope to add more unified error messaging that would pass more informative messages around the application.
+3. **Refactoring** Among other simplifications and polishing, I'd hope to add more unified error messaging that would pass more informative messages around the application.
 
 ### Remaining questions
 
