@@ -1,0 +1,13 @@
+<h1>Challenge</h1>
+
+<h3>Image you got the following email:</h3>
+
+
+<p>To: <%= @user.email %></p>
+
+<p>Dear <%= @user.name %>,</p>
+
+<p>
+  We value your ability to control your notifications. If, at any time, you want to change the types of emails you get, just visit
+  <%= link_to "this link", notification_settings_path(:email => @user.email, :token => @token.nonce), method: :get %>
+</p>

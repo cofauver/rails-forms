@@ -25,5 +25,5 @@
   <%= @user.digest %>
 </p>
 
-<!-- <%= link_to 'Edit', edit_user_path(@user) %> | -->
+<%= link_to 'Edit', notification_settings_path(:email => @user.email, :token => @token.nonce ) %> |
 <%= link_to 'Back', users_path %>
