@@ -24,7 +24,7 @@ class NotificationForm
       @user.marketing = marketing
       @user.articles = articles
       @user.digest = digest
-      Token.consume(@token)
+      Token.consume(@token.nonce)
 
       Token.generate(@user)
       # generate a token so that the demo doesn't run out of tokens
