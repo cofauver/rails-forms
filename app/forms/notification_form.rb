@@ -1,7 +1,9 @@
 class NotificationForm
   include ActiveModel::Model
+  include ActiveModel::Validations
 
   attr_accessor :marketing, :articles, :digest, :email, :original_email
+
 
   def initialize
   end
@@ -19,22 +21,34 @@ class NotificationForm
     @user = User.find_by email:original_email
     @token = Token.find_by nonce:token_string
 
-    if valid? && @token.user_id == @user.id
+    # check that the token matches the user!
+    if @token.user_id == @user.id
+
       @user.email = email
       @user.marketing = marketing
       @user.articles = articles
       @user.digest = digest
-      Token.consume(@token.nonce)
 
-      Token.generate(@user)
-      # generate a token so that the demo doesn't run out of tokens
-      # for editing the user
-      @user.save
-      true
+
+      if @user.valid?
+        Token.consume(@token.nonce)
+
+        Token.generate(@user)
+        # generate a token so that the demo doesn't run out of tokens
+        # for editing the user
+        @user.save!
+        true
+      else
+        current_error = @user.errors.full_messages.to_sentence
+        errors.add :email, current_error
+        false
+      end
     else
       false
     end
 
   end
+
+
 
 end

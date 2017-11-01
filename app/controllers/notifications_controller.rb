@@ -11,7 +11,7 @@ class NotificationsController < ApplicationController
     if @notification_form.submit(params[:notification_form])
       redirect_to users_path , notice: 'Successfully changed notification settings'
     else
-      render new
+      render "new"
     end
   end
 
