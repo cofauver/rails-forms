@@ -22,7 +22,7 @@ class NotificationForm
     @token = Token.find_by nonce:token_string
 
     # check that the token matches the user!
-    if @token.user_id == @user.id
+    if !@token.nil? && @token.user_id == @user.id
 
       @user.email = email
       @user.marketing = marketing
@@ -44,6 +44,7 @@ class NotificationForm
         false
       end
     else
+      errors.add :token, "does not match user"
       false
     end
 
