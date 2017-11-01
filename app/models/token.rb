@@ -20,7 +20,7 @@ class Token < ApplicationRecord
     # if  user.class == User
     #   do the create steps above
     # else
-    #   'to generate a Token, your method call must provide an instance of the User class as an argument'
+    #   flash[:error] = 'to generate a Token, your method call must provide an instance of the User class as an argument'
     # end
   end
 
