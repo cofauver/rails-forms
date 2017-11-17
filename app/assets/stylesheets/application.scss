@@ -13,11 +13,14 @@
  *= require_tree .
  *= require_self
  */
+@import "https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911";
+@import "bootstrap";
+@import "users";
 
 *{
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: "Georgia", "Times New Roman", serif;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Alegreya Sans', sans-serif;
+h1,h2,h3,h4,h5,h6,input{
+  font-family: "Alegreya Sans", sans-serif;
 }

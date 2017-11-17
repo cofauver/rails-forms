@@ -2,7 +2,7 @@
 
 <%= form_for @notification_form, url: notification_settings_path, method: :post do |f| %>
   <% if @notification_form.errors.any? %>
-    <div class="error_messages">
+    <div class="error_messages alert alert-danger">
       <h2>Form is invalid</h2>
       <ul>
         <% @notification_form.errors.full_messages.each do |message| %>
@@ -12,31 +12,34 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :email %>
     <%= f.text_field :email, :value => @email %>
   </div>
 
-  <label for="turn-off-all">Do not email me</label>
-  <input id="shutoff" type="checkbox" name="turn-off-all" value="false"><br />
+  <div class="form-group">
+    <label for="turn-off-all">Do not email me</label>
+    <input id="shutoff" type="checkbox" name="turn-off-all" value="false"><br />
+  </div>
 
   <%= f.hidden_field :token, :value => @token_string %>
   <%= f.hidden_field :original_email, :value => @email %>
 
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :marketing %>
+      <%= f.check_box :marketing, {class: "notification", checked: true}  %> <br />
+    </div>
+    <div class="field">
+      <%= f.label :articles %>
+      <%= f.check_box :articles, {class: "notification", checked: true} %> <br />
+    </div>
+    <div class="field">
+      <%= f.label :digest %>
+      <%= f.check_box :digest, {class: "notification", checked: true} %> <br />
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :marketing %>
-    <%= f.check_box :marketing, {class: "notification", checked: true}  %> <br />
-  </div>
-  <div class="field">
-    <%= f.label :articles %>
-    <%= f.check_box :articles, {class: "notification", checked: true} %> <br />
-  </div>
-  <div class="field">
-    <%= f.label :digest %>
-    <%= f.check_box :digest, {class: "notification", checked: true} %> <br />
-  </div>
-
-  <%= f.submit "Update notification settings" %>
+  <%= f.submit "Update notification settings", {class: "btn btn-primary"} %>
 
 <% end %>
