@@ -10,17 +10,32 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
-@import "https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911";
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,500,700,800");
 @import "bootstrap";
 @import "users";
+@import "notifications";
 
 *{
   font-family: "Georgia", "Times New Roman", serif;
 }
 
+body{
+  background-color: #F7F7F7;
+}
+
 h1,h2,h3,h4,h5,h6,input{
   font-family: "Alegreya Sans", sans-serif;
+}
+
+footer{
+  margin-top:60px;
+  padding-top:60px;
+  color: #FFFFFF;
+  background-color:#222426;
+  height:200px;
+  text-align: center;
+  img{
+    max-width: 15%;
+  }
 }

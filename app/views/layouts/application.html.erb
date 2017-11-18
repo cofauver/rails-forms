@@ -2,15 +2,21 @@
 <html>
   <head>
     <title>TheInformationChallenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application',
-                               'https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911',
                                 media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="container">
-    <%= yield %>
+  <body>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer>
+      <p><img src="https://www.theinformation.com/images/ti/ti-logo-for-dark.svg" alt="the information logo"></p>
+      <p>Cory Fauver | 2017</p>
+    </footer>
   </body>
 </html>
