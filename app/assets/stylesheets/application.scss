@@ -28,6 +28,11 @@ h1,h2,h3,h4,h5,h6,input{
   font-family: "Alegreya Sans", sans-serif;
 }
 
+header{
+  background-color: #FFFFFF;
+  padding: 30px;
+}
+
 footer{
   margin-top:60px;
   padding-top:60px;
@@ -35,7 +40,9 @@ footer{
   background-color:#222426;
   height:200px;
   text-align: center;
-  img{
-    max-width: 15%;
-  }
+}
+
+.logo{
+  max-height: 40px;
+  min-width: 25%;
 }

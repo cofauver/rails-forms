@@ -3,13 +3,14 @@
 }
 
 .title{
-  // margin-left: 10%;
+  margin-left: 20px;
 }
 
 .email-sim{
-  border: 1px solid #CE443D;
+  border: 1px solid #798294;
   background-color: #FFFFFF;
   padding: 40px;
+  margin: 0 10px;
 }
 
 .email-subject{
@@ -25,5 +26,20 @@
 }
 
 .email-btn:hover{
-  color: white;
+  background-color: #3b6099;
+  color: #F7F7F7;
+}
+
+main{
+  text-align: center;
+}
+
+.notification-form{
+  font-size: 1.5em;
+}
+
+.notification-subject{
+  border-top: 1px solid #E0E0E0;
+  text-align: left;
+
 }

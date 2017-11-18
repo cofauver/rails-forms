@@ -4,18 +4,22 @@
     <title>TheInformationChallenge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application',
                                 media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+      <nav class="container">
+        <img class="logo" src="https://www.theinformation.com/images/ti/the-information-logo.svg" alt="the information logo">
+      </nav>
+    </header>
     <div class="container">
       <%= yield %>
     </div>
     <footer>
-      <p><img src="https://www.theinformation.com/images/ti/ti-logo-for-dark.svg" alt="the information logo"></p>
+      <p><img class="logo" src="https://www.theinformation.com/images/ti/ti-logo-for-dark.svg" alt="the information logo"></p>
       <p>Cory Fauver | 2017</p>
     </footer>
   </body>
