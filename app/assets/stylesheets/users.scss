@@ -35,8 +35,12 @@
 }
 
 .yes{
-  color: #00CE8C;
+  color: $affirmative-green;
 }
 .no{
   color: $information-red;
+}
+
+tr{
+  line-height: 3em;
 }
