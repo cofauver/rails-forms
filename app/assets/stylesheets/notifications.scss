@@ -7,27 +7,27 @@
 }
 
 .email-sim{
-  border: 1px solid #798294;
-  background-color: #FFFFFF;
+  border: 1px solid $information-red;
+  background-color: $whitest;
   padding: 40px;
   margin: 0 10px;
 }
 
 .email-subject{
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid $divider-lines;
 }
 
-.email-btn{
+.information-btn{
   margin-top:20px;
   padding: 15px 30px;
   font-family: "Alegreya Sans", sans-serif;
-  background-color: #5D8CD5;
+  background-color: $main-button;
   color: white;
 }
 
-.email-btn:hover{
-  background-color: #3b6099;
-  color: #F7F7F7;
+.information-btn:hover{
+  background-color: $darkened-button;
+  color: $main-background;
 }
 
 main{
@@ -35,11 +35,24 @@ main{
 }
 
 .notification-form{
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .notification-subject{
-  border-top: 1px solid #E0E0E0;
+  padding-top: 20px;
+  border-top: 1px solid $divider-lines;
   text-align: left;
+  color: $information-red;
+  font-size: .5em;
+  letter-spacing: .1em;
+}
 
+.form-group{
+  margin:50px;
+}
+
+label{
+  font-family: $sans;
+  font-weight: bold;
+  font-size:.7em;
 }

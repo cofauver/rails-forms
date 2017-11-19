@@ -11,33 +11,34 @@
  * It is generally better to create a new file per style scope.
  *
  */
-@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,500,700,800");
 @import "bootstrap";
+@import "colors";
+@import "fonts";
 @import "users";
 @import "notifications";
 
 *{
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: $serif;
 }
 
 body{
-  background-color: #F7F7F7;
+  background-color: $main-background;
 }
 
 h1,h2,h3,h4,h5,h6,input{
-  font-family: "Alegreya Sans", sans-serif;
+  font-family: $sans;
 }
 
 header{
-  background-color: #FFFFFF;
+  background-color: $whitest;
   padding: 30px;
 }
 
 footer{
   margin-top:60px;
   padding-top:60px;
-  color: #FFFFFF;
-  background-color:#222426;
+  color: $whitest;
+  background-color:$near-black;
   height:200px;
   text-align: center;
 }

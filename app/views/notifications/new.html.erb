@@ -16,16 +16,16 @@
 
       <main>
 
-        <h4 class="notification-subject">user info</h4>
+        <h4 class="notification-subject">USER INFO</h4>
         <div class="field form-group">
           <%= f.label :email %>
           <%= f.text_field :email, :value => @email %>
         </div>
 
-        <h4 class="notification-subject">notifications</h4>
+        <h4 class="notification-subject">NOTIFICATIONS</h4>
         <div class="form-group">
+          <input id="shutoff" type="checkbox" name="turn-off-all" value="false">
           <label for="turn-off-all">Do not email me</label>
-          <input id="shutoff" type="checkbox" name="turn-off-all" value="false"><br />
         </div>
 
         <%= f.hidden_field :token, :value => @token_string %>
@@ -33,20 +33,20 @@
 
         <div class="form-group row">
           <div class="field col-md-4">
+            <%= f.check_box :marketing, {class: "notification squared-four", checked: true}  %>
             <%= f.label :marketing %>
-            <%= f.check_box :marketing, {class: "notification squared-four", checked: true}  %> <br />
           </div>
           <div class="field col-md-4">
+            <%= f.check_box :articles, {class: "notification squared-four", checked: true} %>
             <%= f.label :articles %>
-            <%= f.check_box :articles, {class: "notification squared-four", checked: true} %> <br />
           </div>
           <div class="field col-md-4">
+            <%= f.check_box :digest, {class: "notification squared-four", checked: true} %>
             <%= f.label :digest %>
-            <%= f.check_box :digest, {class: "notification squared-four", checked: true} %> <br />
           </div>
         </div>
 
-        <%= f.submit "Update notification settings", {class: "btn email-btn"} %>
+        <%= f.submit "Update notification settings", {class: "btn information-btn"} %>
       </main>
     <% end %>
   </div>
