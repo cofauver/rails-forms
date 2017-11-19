@@ -1,29 +1,51 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<img class="img-thumbnail profile-pic head-space" src="http://www.opinionsup.com/images/default-profile-picture_new.png" alt="default profile">
+<div class="row profile">
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <p class="col-sm-12 no-bot-margin">
+    <strong class="profile-info"><%= @user.name %></strong>
+  </p>
+  <p class="col-sm-12 profile-info">
+    <%= @user.email %>
+  </p>
 
-<p>
-  <strong>Marketing:</strong>
-  <%= @user.marketing %>
-</p>
 
-<p>
-  <strong>Articles:</strong>
-  <%= @user.articles %>
-</p>
+  <div class="col-sm-12">
 
-<p>
-  <strong>Digest:</strong>
-  <%= @user.digest %>
-</p>
 
-<%= link_to 'Edit', notification_settings_path(:email => @user.email, :token => @token.nonce ) %> |
-<%= link_to 'Back', users_path %>
+    <span class="notification-cat">
+      <strong>Marketing</strong><br/>
+      <% if @user.marketing %>
+        <span class="fa fa-check yes"></span>
+      <% else %>
+        <span class="fa fa-ban no"></span>
+      <% end %>
+    </span>
+
+    <span class="notification-cat">
+      <strong>Articles</strong><br/>
+
+      <% if @user.articles %>
+        <span class="fa fa-check yes"></span>
+      <% else %>
+        <span class="fa fa-ban no"></span>
+      <% end %>
+    </span>
+
+    <span class="notification-cat">
+      <strong>Digest</strong><br/>
+      <% if @user.digest %>
+        <span class="fa fa-check yes"></span>
+      <% else %>
+        <span class="fa fa-ban no"></span>
+      <% end %>
+    </span>
+
+  </div>
+
+
+  <%= link_to 'Edit', notification_settings_path(:email => @user.email, :token => @token.nonce ) %> |
+  <%= link_to 'Back', users_path %>
+
+</div>

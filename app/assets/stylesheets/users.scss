@@ -1,3 +1,42 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile{
+  text-align: center;
+}
+
+.profile-pic{
+  border-radius: 200px;
+  display: block;
+  max-width:200px;
+  max-width: 200px;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+.profile-info{
+  font-family: $sans;
+  font-size: 2em;
+}
+
+.no-bot-margin{
+  margin-bottom: 0px;
+}
+
+.notification-cat{
+  display: inline-block;
+  margin: 0 5%;
+  strong{
+    font-family: $sans;
+    font-size: 1.2em;
+  }
+}
+
+.yes{
+  color: #00CE8C;
+}
+.no{
+  color: $information-red;
+}
