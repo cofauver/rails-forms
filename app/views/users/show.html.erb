@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%= link_to 'Back', users_path, class: "fa fa-chevron-left btn information-btn" %>
 <img class="img-thumbnail profile-pic head-space" src="http://www.opinionsup.com/images/default-profile-picture_new.png" alt="default profile">
 <div class="row profile">
 
@@ -42,10 +42,13 @@
       <% end %>
     </span>
 
+    <div class="col-sm-12 head-space">
+      <%= link_to 'Edit notification settings', notification_settings_path(:email => @user.email, :token => @token.nonce), class: "btn information-btn" %>
+
+    </div>
+
   </div>
 
 
-  <%= link_to 'Edit', notification_settings_path(:email => @user.email, :token => @token.nonce ) %> |
-  <%= link_to 'Back', users_path %>
 
 </div>
