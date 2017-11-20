@@ -1,42 +1,53 @@
-<h1>Change Notification Settings</h1>
+<h1 class="head-space title">Change Notification Settings</h1>
+<div class="row justify-content-lg-center head-space">
 
-<%= form_for @notification_form, url: notification_settings_path, method: :post do |f| %>
-  <% if @notification_form.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% @notification_form.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class="col-lg-8 notification-form">
+    <%= form_for @notification_form, url: notification_settings_path, method: :post do |f| %>
+      <% if @notification_form.errors.any? %>
+        <div class="error_messages alert alert-danger">
+          <h2>Form is invalid</h2>
+          <ul>
+            <% @notification_form.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email, :value => @email %>
+      <main>
+
+        <h4 class="notification-subject">USER INFO</h4>
+        <div class="field form-group">
+          <%= f.label :email %>
+          <%= f.text_field :email, :value => @email %>
+        </div>
+
+        <h4 class="notification-subject">NOTIFICATIONS</h4>
+        <div class="form-group special-checkbox">
+          <input id="shutoff" type="checkbox" name="turn-off-all" value="false">
+          <label for="turn-off-all">Do not email me</label>
+        </div>
+
+        <%= f.hidden_field :token, :value => @token_string %>
+        <%= f.hidden_field :original_email, :value => @email %>
+
+        <div class="form-group row">
+          <div class="field col-md-4 special-checkbox">
+            <%= f.check_box :marketing, {class: "notification squared-four", checked: true}  %>
+            <%= f.label :marketing %>
+          </div>
+          <div class="field col-md-4 special-checkbox">
+            <%= f.check_box :articles, {class: "notification squared-four", checked: true} %>
+            <%= f.label :articles %>
+          </div>
+          <div class="field col-md-4">
+            <%= f.check_box :digest, {class: "notification squared-four", checked: true} %>
+            <%= f.label :digest %>
+          </div>
+        </div>
+
+        <%= f.submit "Update notification settings", {class: "btn information-btn"} %>
+      </main>
+    <% end %>
   </div>
-
-  <label for="turn-off-all">Do not email me</label>
-  <input id="shutoff" type="checkbox" name="turn-off-all" value="false"><br />
-
-  <%= f.hidden_field :token, :value => @token_string %>
-  <%= f.hidden_field :original_email, :value => @email %>
-
-
-  <div class="field">
-    <%= f.label :marketing %>
-    <%= f.check_box :marketing, {class: "notification", checked: true}  %> <br />
-  </div>
-  <div class="field">
-    <%= f.label :articles %>
-    <%= f.check_box :articles, {class: "notification", checked: true} %> <br />
-  </div>
-  <div class="field">
-    <%= f.label :digest %>
-    <%= f.check_box :digest, {class: "notification", checked: true} %> <br />
-  </div>
-
-  <%= f.submit "Update notification settings" %>
-
-<% end %>
+</div>

@@ -8,6 +8,14 @@ At this point, run `rails s` to serve the application and go to `localhost:3000`
 
 Once you submit, the form currently redirects to the users index page at `/users`. This is for the sake of the demo, so that you can see your changes have taken place on the relevant user, but would not be the setup I'd use for a deployed app.
 
+### Updating
+
+To update your local codebase, `git pull` and `bundle` before running `rails s`. Then you should be able to see the updated page on `localhost:3000`.
+
+##### Recent improvements
+
+The landing page, notifications form, users index page, and users show page have been given a total styling revamp! Other pages - the new user form, for example - are still unstyled.
+
 ### Navigating the codebase
 
 The setup of this app is a bit more built out than requested. I imagined that the requested `/notification-settings` route would typically be accessed by following a link *from the bottom of an email*. This user would not need to sign in to adjust their account settings because of the token and email pair that could verify their identity. Because of that, I left room for a normal `/users/:id/edit` route in case you also wanted another similar form that would allow a signed-in user to edit their name and other possible user details.
@@ -19,7 +27,7 @@ This meant that I felt the `/notification-settings` form should live in its own 
 While I finished the basic requirements laid out in the spec sheet, there are a few steps ahead that I would complete next, if given more time.
 
 1. **Add testing** Both the models and the form I created need testing. I'd hope to follow the advice here and "[Write tests. Not too many. Mostly integration.](https://blog.kentcdodds.com/write-tests-not-too-many-mostly-integration-5e8c7fff591c)
-2. **Add Styles** I'd love to integrate bootstrap, materialize, or another styling framework to polish up the appearance of the form and the site in general.
+2. **Improve Styles** I'd love to adjust the checkboxes so that they are bigger, flatter, and more square, but styling checkboxes turns out to be a tough styling task!
 3. **Refactoring** Among other simplifications and polishing, I'd hope to add more unified error messaging that would pass more informative messages around the application. I'd also hope to refactor the `NotificationForm` object's submit method to make it more readable.
 
 ### Remaining questions

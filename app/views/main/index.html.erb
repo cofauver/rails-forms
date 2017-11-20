@@ -1,15 +1,23 @@
-<h1>Challenge</h1>
+<h1 class="head-space title">The Information Challenge</h1>
+<div class="row justify-content-lg-center head-space ">
+  <div class="col-lg-8 email-sim">
 
-<h3>Imagine you get the following email:</h3>
 
-<br/>
-<p>To: <em><%= @user.email %></em></p>
-<p>From: <em>Cory Fauver</em></p> <br/>
-<p>Dear <%= @user.name %>,</p>
-<p>
-  We value your ability to control your notifications. If, at any time, you want to change the types of emails you get, just visit
-  <%= link_to "this link", notification_settings_path(:email => @user.email, :token => @token.nonce), method: :get %>.
-</p>
-<br />
-<p>Looking out for you,</p>
-<p>Cory</p>
+    <h3 class="email-subject">Imagine you get the following email</h3>
+
+    <br/>
+    From: <strong>Cory Fauver</strong> <em>cofauver@theinformation.com</em><br/>
+    <p>To: <em>me,  <%= @user.email %></em></p>
+
+    <p>Dear <%= @user.name %>,</p>
+    <p>
+      We value your ability to control your notifications. If, at any time, you want to change the types of emails you get, just click this button:
+    </p>
+    <div class="text-center">
+      <%= link_to "Notification Settings", notification_settings_path(:email => @user.email, :token => @token.nonce), class: "btn information-btn", method: :get %>
+    </div>
+    <br />
+    <p>Looking out for you,</p>
+    <p>Cory</p>
+  </div>
+</div>

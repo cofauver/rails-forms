@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap";
+@import "colors";
+@import "fonts";
+@import "users";
+@import "notifications";
+
+*{
+  font-family: $serif;
+}
+
+body{
+  background-color: $main-background;
+}
+
+h1,h2,h3,h4,h5,h6,input{
+  font-family: $sans;
+}
+
+header{
+  background-color: $whitest;
+  padding: 30px;
+}
+
+footer{
+  margin-top:60px;
+  padding-top:60px;
+  color: $whitest;
+  background-color:$near-black;
+  height:200px;
+  text-align: center;
+}
+
+.logo{
+  max-height: 40px;
+  min-width: 25%;
+}
+
+.information-btn{
+  margin-top:20px;
+  padding: 15px 30px;
+  font-family: "Alegreya Sans", sans-serif;
+  background-color: $main-button;
+  color: white;
+}
+
+.information-btn:hover{
+  background-color: $darkened-button;
+  color: $main-background;
+}
