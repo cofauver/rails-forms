@@ -14,7 +14,12 @@ To update your local codebase, `git pull` and `bundle` before running `rails s`.
 
 ##### Recent improvements
 
-The landing page, notifications form, users index page, and users show page have been given a total styling revamp! Other pages - the new user form, for example - are still unstyled.
+The landing page, notifications form, users index page, and users show page have been given a total styling revamp! Other pages - the new user form, for example - are still unstyled. The styling work can be found in the `/app/assets/stylesheets` directory.
+- `application.scss` contains site-wide styles and a manifest of the other stylesheets
+- `notifications.scss` covers styles on the simulated "email" landing page (`/`) and the notifications form (`/notification-settings`).
+- `users.scss` covers the styles on the users index page (`/users`) and the users show page (`/users/:id`).
+- `fonts.scss` contains font information.
+- `colors.scss` contains aliases for the colors used commonly across the site.
 
 ### Navigating the codebase
 
