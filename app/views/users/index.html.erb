@@ -1,42 +1,42 @@
-<h1>Users</h1>
-<p id="notice head-space"><%= notice %></p>
+<h1 class="head-space">Users</h1>
 <div class="row justify-content-lg-center head-space">
+  <% if notice %>
+    <p class="col-lg-8 alert alert-success" id="notice"><%= notice %></p><br/>
+  <% end %>
 
-
-  <table>
+  <table class="col-md-8">
     <thead>
-      <tr>
+      <tr class="separators">
         <th></th>
         <th>Name</th>
         <th>Email</th>
-        <th>Marketing</th>
-        <th>Articles</th>
-        <th>Digest</th>
-        <th colspan="3"></th>
+        <th class="center">Marketing</th>
+        <th class="center">Articles</th>
+        <th class="center">Digest</th>
       </tr>
     </thead>
 
     <tbody>
       <% @users.each do |user| %>
-        <tr>
-          <td><%= link_to raw('<span class="fa fa-trash"></span>'), user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <tr class="separators <%= cycle('even', 'odd') -%>">
+          <td class="trash"><%= link_to raw('<span class="fa fa-trash"></span>'), user, method: :delete, data: { confirm: 'Are you sure you want to delete this user?' } %></td>
           <td><%= link_to user.name, user %></td>
           <td><%= user.email %></td>
-          <td>
+          <td class="center">
             <% if user.marketing %>
               <span class="fa fa-check yes"></span>
             <% else %>
               <span class="fa fa-ban no"></span>
             <% end %>
           </td>
-          <td>
+          <td class="center">
             <% if user.articles %>
               <span class="fa fa-check yes"></span>
             <% else %>
               <span class="fa fa-ban no"></span>
             <% end %>
           </td>
-          <td>
+          <td class="center">
             <% if user.digest %>
               <span class="fa fa-check yes"></span>
             <% else %>
@@ -52,4 +52,6 @@
 
 
 </div>
-<%= link_to 'New User', new_user_path, class: "btn information-btn center" %>
+<div class="center">
+  <%= link_to 'New User', new_user_path, class: "btn information-btn center" %>
+</div>

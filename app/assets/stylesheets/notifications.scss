@@ -17,19 +17,6 @@
   border-bottom: 1px solid $divider-lines;
 }
 
-.information-btn{
-  margin-top:20px;
-  padding: 15px 30px;
-  font-family: "Alegreya Sans", sans-serif;
-  background-color: $main-button;
-  color: white;
-}
-
-.information-btn:hover{
-  background-color: $darkened-button;
-  color: $main-background;
-}
-
 main{
   text-align: center;
 }
@@ -56,3 +43,52 @@ label{
   font-weight: bold;
   font-size:.7em;
 }
+
+.error_messages{
+  font-size:.5em;
+}
+
+// .special-checkbox{
+//   width: 25px;
+//   margin: 20px 100px;
+//   position: relative;
+//
+// }
+//
+// .special-checkbox label {
+//   cursor: pointer;
+//   position: absolute;
+//   width: 25px;
+//   height: 25px;
+//   top: 0;
+//   left: 0;
+//   background: #eee;
+//   border:1px solid #ddd;
+// }
+//
+// .special-checkbox label:after {
+//   opacity: 0.2;
+//   content: '';
+//   position: absolute;
+//   width: 9px;
+//   height: 5px;
+//   background: transparent;
+//   top: 6px;
+//   left: 7px;
+//   border: 3px solid #333;
+//   border-top: none;
+//   border-right: none;
+//   -webkit-transform: rotate(-45deg);
+//   -moz-transform: rotate(-45deg);
+//   -o-transform: rotate(-45deg);
+//   -ms-transform: rotate(-45deg);
+//   transform: rotate(-45deg);
+// }
+//
+// .special-checkbox label:hover::after {
+//   opacity: 0.5;
+// }
+//
+// .special-checkbox input[type=checkbox]:checked + label:after {
+//   opacity: 1;
+// }

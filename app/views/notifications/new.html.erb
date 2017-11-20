@@ -23,7 +23,7 @@
         </div>
 
         <h4 class="notification-subject">NOTIFICATIONS</h4>
-        <div class="form-group">
+        <div class="form-group special-checkbox">
           <input id="shutoff" type="checkbox" name="turn-off-all" value="false">
           <label for="turn-off-all">Do not email me</label>
         </div>
@@ -32,11 +32,11 @@
         <%= f.hidden_field :original_email, :value => @email %>
 
         <div class="form-group row">
-          <div class="field col-md-4">
+          <div class="field col-md-4 special-checkbox">
             <%= f.check_box :marketing, {class: "notification squared-four", checked: true}  %>
             <%= f.label :marketing %>
           </div>
-          <div class="field col-md-4">
+          <div class="field col-md-4 special-checkbox">
             <%= f.check_box :articles, {class: "notification squared-four", checked: true} %>
             <%= f.label :articles %>
           </div>

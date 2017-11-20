@@ -38,9 +38,33 @@
   color: $affirmative-green;
 }
 .no{
-  color: $information-red;
+  color: $negative-red;
 }
 
 tr{
   line-height: 3em;
+}
+
+th, td{
+  padding:10px;
+}
+
+a{
+  color:$main-button;
+}
+
+.center{
+  text-align: center;
+}
+
+.separators{
+  border-bottom: 1px solid $divider-lines;
+}
+
+.even{
+  background-color:$alternate-grey;
+}
+
+.trash{
+  margin-right: 30px;
 }

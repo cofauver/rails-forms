@@ -11,7 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  */
- 
+
 @import "bootstrap";
 @import "colors";
 @import "fonts";
@@ -47,4 +47,17 @@ footer{
 .logo{
   max-height: 40px;
   min-width: 25%;
+}
+
+.information-btn{
+  margin-top:20px;
+  padding: 15px 30px;
+  font-family: "Alegreya Sans", sans-serif;
+  background-color: $main-button;
+  color: white;
+}
+
+.information-btn:hover{
+  background-color: $darkened-button;
+  color: $main-background;
 }
