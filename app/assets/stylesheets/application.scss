@@ -18,6 +18,11 @@
 @import "users";
 @import "notifications";
 
+
+// ******************
+// site-wide styles
+// ******************
+
 *{
   font-family: $serif;
 }
@@ -28,6 +33,10 @@ body{
 
 h1,h2,h3,h4,h5,h6,input{
   font-family: $sans;
+}
+
+a{
+  color:$main-button;
 }
 
 header{
@@ -49,6 +58,15 @@ footer{
   min-width: 25%;
 }
 
+// used across the site to add space above
+.head-space{
+  margin-top:60px;
+}
+
+// *****************************
+// default buttons for the site
+// *****************************
+
 .information-btn{
   margin-top:20px;
   padding: 15px 30px;
@@ -61,3 +79,7 @@ footer{
   background-color: $darkened-button;
   color: $main-background;
 }
+
+// ********************
+// end site-wide styles
+// ********************

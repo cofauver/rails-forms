@@ -2,6 +2,59 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// styles the checkmarks or crossouts
+
+.yes{
+  color: $affirmative-green;
+}
+.no{
+  color: $negative-red;
+}
+
+// *************************
+// Styles for the user index page
+// *************************
+
+tr{
+  line-height: 3em;
+}
+
+th, td{
+  padding:10px;
+}
+
+th{
+  font-size: 1.3em;
+  font-family: $sans;
+}
+
+.center{
+  text-align: center;
+}
+
+.separators{
+  border-bottom: 1px solid $divider-lines;
+}
+
+.even{
+  background-color:$alternate-grey;
+}
+
+.trash{
+  margin-right: 30px;
+}
+
+// *************************
+// End styles for the user show page
+// *************************
+
+
+// *************************
+// Styles for the user show page
+// *************************
+
+
 .profile{
   text-align: center;
 }
@@ -34,37 +87,6 @@
   }
 }
 
-.yes{
-  color: $affirmative-green;
-}
-.no{
-  color: $negative-red;
-}
-
-tr{
-  line-height: 3em;
-}
-
-th, td{
-  padding:10px;
-}
-
-a{
-  color:$main-button;
-}
-
-.center{
-  text-align: center;
-}
-
-.separators{
-  border-bottom: 1px solid $divider-lines;
-}
-
-.even{
-  background-color:$alternate-grey;
-}
-
-.trash{
-  margin-right: 30px;
-}
+// *************************
+// End styles for the user show page
+// *************************
